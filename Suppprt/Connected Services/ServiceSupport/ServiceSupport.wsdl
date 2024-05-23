@@ -1,0 +1,1740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LoginSupport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginSupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginSupportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomerLogList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="custnum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="submittedDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="stat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="suptype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomerLogListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerLogListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="log_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCustGroup" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignupSupport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignupSupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignupSupportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatusSupport">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetStatusSupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStatusSupportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTypeSupport">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTypeSupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTypeSupportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequestorSupport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequestorSupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRequestorSupportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupportLogReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartCust" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndCust" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartReqDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndReqDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Open" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Inprocess" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Close" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustGroup" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupportLogReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSupportLogReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSupportLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Stat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DBSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Problem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Requestor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sModule" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSeverity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sProgramGroup" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dProjectDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dRequestDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAfterWork" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iHoliday" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sInform" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCause" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHowtoCheck" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCurrentSol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLongTermSol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRequestTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAcknowledgeBy" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dResponseDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponseTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSupportLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertSupportLogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatabaseSite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatabaseSiteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatabaseSiteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmailRequestor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Req" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmailRequestorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmailRequestorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResource">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetResourceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetErrorType">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetErrorTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetErrorTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSupportLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Stat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cause" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Solution" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Responsible" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClosedBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Problem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HowtoCheck" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrentSol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LongTermSol" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RespondDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RespondTime" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSupportLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateSupportLogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupportModule">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSupportModuleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSupportModuleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequestor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequestorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRequestorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertRequestor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Req" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertRequestorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertRequestorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertReplyLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Reply" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertReplyLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertReplyLogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReplyLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReplyLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReplyLogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIssueSummaryReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartCust" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndCust" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartReqDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndReqDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustGroup" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIssueSummaryReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIssueSummaryReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIssueSummaryReports">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartCust" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndCust" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartReqDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndReqDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustGroup" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIssueSummaryReportsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIssueSummaryReportsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserWebSupport">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserWebSupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserWebSupportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUserWebSupport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCustomer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCategory" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUserWebSupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertUserWebSupportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserWebSupport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCustomer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCategory" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRowPointer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserWebSupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateUserWebSupportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserWebSupport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sRowPointer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserWebSupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteUserWebSupportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRequestor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sReq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCustomer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRowPointer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRequestorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateRequestorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRequestor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sRowPointer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRequestorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteRequestorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeverity">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSeverityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSeverityResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProgramGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sModule" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProgramGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProgramGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectedDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sCurrDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSeverity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sShift" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectedDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectedDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerEmailSupport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCustNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerEmailSupportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerEmailSupportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInformProblem">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetInformProblemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInformProblemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResponseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginSupportSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginSupport" />
+  </wsdl:message>
+  <wsdl:message name="LoginSupportSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginSupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="CustomerLogListSoapIn">
+    <wsdl:part name="parameters" element="tns:CustomerLogList" />
+  </wsdl:message>
+  <wsdl:message name="CustomerLogListSoapOut">
+    <wsdl:part name="parameters" element="tns:CustomerLogListResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:LogDetail" />
+  </wsdl:message>
+  <wsdl:message name="LogDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:LogDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SignupSupportSoapIn">
+    <wsdl:part name="parameters" element="tns:SignupSupport" />
+  </wsdl:message>
+  <wsdl:message name="SignupSupportSoapOut">
+    <wsdl:part name="parameters" element="tns:SignupSupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusSupportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStatusSupport" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusSupportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStatusSupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTypeSupportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTypeSupport" />
+  </wsdl:message>
+  <wsdl:message name="GetTypeSupportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTypeSupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestorSupportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRequestorSupport" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestorSupportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRequestorSupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSupportLogReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupportLogReport" />
+  </wsdl:message>
+  <wsdl:message name="GetSupportLogReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupportLogReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertSupportLogSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertSupportLog" />
+  </wsdl:message>
+  <wsdl:message name="InsertSupportLogSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertSupportLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseSiteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatabaseSite" />
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseSiteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatabaseSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailRequestorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmailRequestor" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailRequestorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmailRequestorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResource" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetErrorTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetErrorType" />
+  </wsdl:message>
+  <wsdl:message name="GetErrorTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetErrorTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSupportLogSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSupportLog" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSupportLogSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSupportLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSupportModuleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupportModule" />
+  </wsdl:message>
+  <wsdl:message name="GetSupportModuleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupportModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRequestor" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRequestorResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertRequestorSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertRequestor" />
+  </wsdl:message>
+  <wsdl:message name="InsertRequestorSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertRequestorResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertReplyLogSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertReplyLog" />
+  </wsdl:message>
+  <wsdl:message name="InsertReplyLogSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertReplyLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReplyLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReplyLog" />
+  </wsdl:message>
+  <wsdl:message name="GetReplyLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReplyLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIssueSummaryReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIssueSummaryReport" />
+  </wsdl:message>
+  <wsdl:message name="GetIssueSummaryReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIssueSummaryReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIssueSummaryReportsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIssueSummaryReports" />
+  </wsdl:message>
+  <wsdl:message name="GetIssueSummaryReportsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIssueSummaryReportsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserWebSupportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserWebSupport" />
+  </wsdl:message>
+  <wsdl:message name="GetUserWebSupportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserWebSupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUserWebSupportSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUserWebSupport" />
+  </wsdl:message>
+  <wsdl:message name="InsertUserWebSupportSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUserWebSupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserWebSupportSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserWebSupport" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserWebSupportSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserWebSupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserWebSupportSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserWebSupport" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserWebSupportSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserWebSupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRequestorSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateRequestor" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRequestorSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateRequestorResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRequestorSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRequestor" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRequestorSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRequestorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSeveritySoapIn">
+    <wsdl:part name="parameters" element="tns:GetSeverity" />
+  </wsdl:message>
+  <wsdl:message name="GetSeveritySoapOut">
+    <wsdl:part name="parameters" element="tns:GetSeverityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProgramGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProgramGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectedDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectedDate" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectedDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectedDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerEmailSupportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerEmailSupport" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerEmailSupportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerEmailSupportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInformProblemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInformProblem" />
+  </wsdl:message>
+  <wsdl:message name="GetInformProblemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInformProblemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResponseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSupportSoap">
+    <wsdl:operation name="LoginSupport">
+      <wsdl:input message="tns:LoginSupportSoapIn" />
+      <wsdl:output message="tns:LoginSupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerLogList">
+      <wsdl:input message="tns:CustomerLogListSoapIn" />
+      <wsdl:output message="tns:CustomerLogListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogDetail">
+      <wsdl:input message="tns:LogDetailSoapIn" />
+      <wsdl:output message="tns:LogDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <wsdl:input message="tns:GetCustomerSoapIn" />
+      <wsdl:output message="tns:GetCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SignupSupport">
+      <wsdl:input message="tns:SignupSupportSoapIn" />
+      <wsdl:output message="tns:SignupSupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusSupport">
+      <wsdl:input message="tns:GetStatusSupportSoapIn" />
+      <wsdl:output message="tns:GetStatusSupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeSupport">
+      <wsdl:input message="tns:GetTypeSupportSoapIn" />
+      <wsdl:output message="tns:GetTypeSupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestorSupport">
+      <wsdl:input message="tns:GetRequestorSupportSoapIn" />
+      <wsdl:output message="tns:GetRequestorSupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportLogReport">
+      <wsdl:input message="tns:GetSupportLogReportSoapIn" />
+      <wsdl:output message="tns:GetSupportLogReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSupportLog">
+      <wsdl:input message="tns:InsertSupportLogSoapIn" />
+      <wsdl:output message="tns:InsertSupportLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseSite">
+      <wsdl:input message="tns:GetDatabaseSiteSoapIn" />
+      <wsdl:output message="tns:GetDatabaseSiteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailRequestor">
+      <wsdl:input message="tns:GetEmailRequestorSoapIn" />
+      <wsdl:output message="tns:GetEmailRequestorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResource">
+      <wsdl:input message="tns:GetResourceSoapIn" />
+      <wsdl:output message="tns:GetResourceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorType">
+      <wsdl:input message="tns:GetErrorTypeSoapIn" />
+      <wsdl:output message="tns:GetErrorTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSupportLog">
+      <wsdl:input message="tns:UpdateSupportLogSoapIn" />
+      <wsdl:output message="tns:UpdateSupportLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportModule">
+      <wsdl:input message="tns:GetSupportModuleSoapIn" />
+      <wsdl:output message="tns:GetSupportModuleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestor">
+      <wsdl:input message="tns:GetRequestorSoapIn" />
+      <wsdl:output message="tns:GetRequestorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRequestor">
+      <wsdl:input message="tns:InsertRequestorSoapIn" />
+      <wsdl:output message="tns:InsertRequestorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertReplyLog">
+      <wsdl:input message="tns:InsertReplyLogSoapIn" />
+      <wsdl:output message="tns:InsertReplyLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReplyLog">
+      <wsdl:input message="tns:GetReplyLogSoapIn" />
+      <wsdl:output message="tns:GetReplyLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueSummaryReport">
+      <wsdl:input message="tns:GetIssueSummaryReportSoapIn" />
+      <wsdl:output message="tns:GetIssueSummaryReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueSummaryReports">
+      <wsdl:input message="tns:GetIssueSummaryReportsSoapIn" />
+      <wsdl:output message="tns:GetIssueSummaryReportsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWebSupport">
+      <wsdl:input message="tns:GetUserWebSupportSoapIn" />
+      <wsdl:output message="tns:GetUserWebSupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserWebSupport">
+      <wsdl:input message="tns:InsertUserWebSupportSoapIn" />
+      <wsdl:output message="tns:InsertUserWebSupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserWebSupport">
+      <wsdl:input message="tns:UpdateUserWebSupportSoapIn" />
+      <wsdl:output message="tns:UpdateUserWebSupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserWebSupport">
+      <wsdl:input message="tns:DeleteUserWebSupportSoapIn" />
+      <wsdl:output message="tns:DeleteUserWebSupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRequestor">
+      <wsdl:input message="tns:UpdateRequestorSoapIn" />
+      <wsdl:output message="tns:UpdateRequestorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRequestor">
+      <wsdl:input message="tns:DeleteRequestorSoapIn" />
+      <wsdl:output message="tns:DeleteRequestorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeverity">
+      <wsdl:input message="tns:GetSeveritySoapIn" />
+      <wsdl:output message="tns:GetSeveritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramGroup">
+      <wsdl:input message="tns:GetProgramGroupSoapIn" />
+      <wsdl:output message="tns:GetProgramGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectedDate">
+      <wsdl:input message="tns:GetProjectedDateSoapIn" />
+      <wsdl:output message="tns:GetProjectedDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerEmailSupport">
+      <wsdl:input message="tns:GetCustomerEmailSupportSoapIn" />
+      <wsdl:output message="tns:GetCustomerEmailSupportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInformProblem">
+      <wsdl:input message="tns:GetInformProblemSoapIn" />
+      <wsdl:output message="tns:GetInformProblemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <wsdl:input message="tns:GetResponseSoapIn" />
+      <wsdl:output message="tns:GetResponseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSupportSoap" type="tns:ServiceSupportSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginSupport">
+      <soap:operation soapAction="http://tempuri.org/LoginSupport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerLogList">
+      <soap:operation soapAction="http://tempuri.org/CustomerLogList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogDetail">
+      <soap:operation soapAction="http://tempuri.org/LogDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap:operation soapAction="http://tempuri.org/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignupSupport">
+      <soap:operation soapAction="http://tempuri.org/SignupSupport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusSupport">
+      <soap:operation soapAction="http://tempuri.org/GetStatusSupport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeSupport">
+      <soap:operation soapAction="http://tempuri.org/GetTypeSupport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestorSupport">
+      <soap:operation soapAction="http://tempuri.org/GetRequestorSupport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportLogReport">
+      <soap:operation soapAction="http://tempuri.org/GetSupportLogReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSupportLog">
+      <soap:operation soapAction="http://tempuri.org/InsertSupportLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseSite">
+      <soap:operation soapAction="http://tempuri.org/GetDatabaseSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailRequestor">
+      <soap:operation soapAction="http://tempuri.org/GetEmailRequestor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResource">
+      <soap:operation soapAction="http://tempuri.org/GetResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorType">
+      <soap:operation soapAction="http://tempuri.org/GetErrorType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSupportLog">
+      <soap:operation soapAction="http://tempuri.org/UpdateSupportLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportModule">
+      <soap:operation soapAction="http://tempuri.org/GetSupportModule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestor">
+      <soap:operation soapAction="http://tempuri.org/GetRequestor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRequestor">
+      <soap:operation soapAction="http://tempuri.org/InsertRequestor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertReplyLog">
+      <soap:operation soapAction="http://tempuri.org/InsertReplyLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReplyLog">
+      <soap:operation soapAction="http://tempuri.org/GetReplyLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueSummaryReport">
+      <soap:operation soapAction="http://tempuri.org/GetIssueSummaryReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueSummaryReports">
+      <soap:operation soapAction="http://tempuri.org/GetIssueSummaryReports" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWebSupport">
+      <soap:operation soapAction="http://tempuri.org/GetUserWebSupport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserWebSupport">
+      <soap:operation soapAction="http://tempuri.org/InsertUserWebSupport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserWebSupport">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserWebSupport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserWebSupport">
+      <soap:operation soapAction="http://tempuri.org/DeleteUserWebSupport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRequestor">
+      <soap:operation soapAction="http://tempuri.org/UpdateRequestor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRequestor">
+      <soap:operation soapAction="http://tempuri.org/DeleteRequestor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeverity">
+      <soap:operation soapAction="http://tempuri.org/GetSeverity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramGroup">
+      <soap:operation soapAction="http://tempuri.org/GetProgramGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectedDate">
+      <soap:operation soapAction="http://tempuri.org/GetProjectedDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerEmailSupport">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerEmailSupport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInformProblem">
+      <soap:operation soapAction="http://tempuri.org/GetInformProblem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <soap:operation soapAction="http://tempuri.org/GetResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSupportSoap12" type="tns:ServiceSupportSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginSupport">
+      <soap12:operation soapAction="http://tempuri.org/LoginSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerLogList">
+      <soap12:operation soapAction="http://tempuri.org/CustomerLogList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogDetail">
+      <soap12:operation soapAction="http://tempuri.org/LogDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignupSupport">
+      <soap12:operation soapAction="http://tempuri.org/SignupSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusSupport">
+      <soap12:operation soapAction="http://tempuri.org/GetStatusSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeSupport">
+      <soap12:operation soapAction="http://tempuri.org/GetTypeSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestorSupport">
+      <soap12:operation soapAction="http://tempuri.org/GetRequestorSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportLogReport">
+      <soap12:operation soapAction="http://tempuri.org/GetSupportLogReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSupportLog">
+      <soap12:operation soapAction="http://tempuri.org/InsertSupportLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseSite">
+      <soap12:operation soapAction="http://tempuri.org/GetDatabaseSite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailRequestor">
+      <soap12:operation soapAction="http://tempuri.org/GetEmailRequestor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResource">
+      <soap12:operation soapAction="http://tempuri.org/GetResource" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorType">
+      <soap12:operation soapAction="http://tempuri.org/GetErrorType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSupportLog">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSupportLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupportModule">
+      <soap12:operation soapAction="http://tempuri.org/GetSupportModule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestor">
+      <soap12:operation soapAction="http://tempuri.org/GetRequestor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRequestor">
+      <soap12:operation soapAction="http://tempuri.org/InsertRequestor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertReplyLog">
+      <soap12:operation soapAction="http://tempuri.org/InsertReplyLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReplyLog">
+      <soap12:operation soapAction="http://tempuri.org/GetReplyLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueSummaryReport">
+      <soap12:operation soapAction="http://tempuri.org/GetIssueSummaryReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueSummaryReports">
+      <soap12:operation soapAction="http://tempuri.org/GetIssueSummaryReports" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWebSupport">
+      <soap12:operation soapAction="http://tempuri.org/GetUserWebSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserWebSupport">
+      <soap12:operation soapAction="http://tempuri.org/InsertUserWebSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserWebSupport">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserWebSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserWebSupport">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUserWebSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRequestor">
+      <soap12:operation soapAction="http://tempuri.org/UpdateRequestor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRequestor">
+      <soap12:operation soapAction="http://tempuri.org/DeleteRequestor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeverity">
+      <soap12:operation soapAction="http://tempuri.org/GetSeverity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramGroup">
+      <soap12:operation soapAction="http://tempuri.org/GetProgramGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectedDate">
+      <soap12:operation soapAction="http://tempuri.org/GetProjectedDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerEmailSupport">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerEmailSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInformProblem">
+      <soap12:operation soapAction="http://tempuri.org/GetInformProblem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <soap12:operation soapAction="http://tempuri.org/GetResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceSupport">
+    <wsdl:port name="ServiceSupportSoap" binding="tns:ServiceSupportSoap">
+      <soap:address location="http://localhost:21969/ServiceSupport.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSupportSoap12" binding="tns:ServiceSupportSoap12">
+      <soap12:address location="http://localhost:21969/ServiceSupport.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
